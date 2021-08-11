@@ -1,0 +1,42 @@
+{
+  "name": "getpic",
+  "version": "1.0.0",
+  "description": "pinterest clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hernanreiq/GetPic.git"
+  },
+  "keywords": [
+    "pinterest",
+    "image",
+    "pic",
+    "photo",
+    "clone",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Hernan.Reiq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hernanreiq/GetPic/issues"
+  },
+  "homepage": "https://github.com/hernanreiq/GetPic#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "mongoose": "^5.13.6",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "timeago.js": "^4.0.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
