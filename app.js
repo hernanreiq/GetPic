@@ -4,6 +4,7 @@ const express =  require('express');
 const path = require('path');
 const morgan = require('morgan');
 const multer = require('multer');
+const {v4: uuidv4} = require('uuid');
 
 const app = express();
 
@@ -20,8 +21,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //MIDDLEWARES (Procesan información antes de llegar a las rutas)
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false})) // Entender los datos enviados por los formularios
-app.use(multer({dest: path.join(__dirname, 'public/img/uploads')}).single('image'))
-
+const storage = multer.diskStorage({
+    destination: path.join(__dirname, 'public/img/uploads'),
+    filename: (req, file, cb, filename) => {
+        cb(null, uuidv4() + path.extname(file.originalname));
+    }
+});
+app.use(multer({storage: storage}).single('image'));
 //RUTAS
 app.use('/', getpic_routes);
 
