@@ -11,6 +11,9 @@ var controller = {
     },
     imageUploaded: function(req, res){
         res.status(200).send({message: "Imagen subida", image: req.file});
+    },
+    delete: function(req, res){
+        res.status(200).render('delete');
     }
 }
 
