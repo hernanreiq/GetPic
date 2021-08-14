@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(36, 36, 36);
+}
+.navbar {
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to bottom, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29); 
+}
+.navbar a {
+    color: white;
+}
+.card, .card-body {
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to top, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to top, #24243e, #302b63, #0f0c29); 
+    color: white;
+}
+.btn {
+    color: white; 
+    text-transform: uppercase;   
+    font-weight: bold;
+}
+.btn:hover {
+    color: white;
+}
+.btn-view {
+    background: #396afc; 
+    background: -webkit-linear-gradient(to top, #2948ff, #396afc); 
+    background: linear-gradient(to top, #2948ff, #396afc);
+}
+.btn-view:hover {
+    background: #0575E6; 
+    background: -webkit-linear-gradient(to top, #021B79, #0575E6); 
+    background: linear-gradient(to top, #021B79, #0575E6);
+}
+.btn-upload {
+    background: #52c234; 
+    background: -webkit-linear-gradient(to top, #061700, #52c234); 
+    background: linear-gradient(to top, #061700, #52c234);    
+}
+.btn-upload:hover {
+    background: #3c9423; 
+    background: -webkit-linear-gradient(to top, #061700, #3c9423); 
+    background: linear-gradient(to top, #061700, #3c9423);
+}
+.btn-delete {
+    background: #870000; 
+    background: -webkit-linear-gradient(to top, #190A05, #870000); 
+    background: linear-gradient(to top, #190A05, #870000);
+}
+.btn-delete:hover {
+    background: #ED213A;  
+    background: -webkit-linear-gradient(to top, #611a12, #ED213A);  
+    background: linear-gradient(to top, #611a12, #ED213A); 
+}
+footer {
+    background: #0f0c29; 
+}

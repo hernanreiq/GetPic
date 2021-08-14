@@ -32,6 +32,9 @@ var controller = {
         const image = await PicModel.findByIdAndRemove(id);
         await unlink(path.resolve('./public' + image.path));
         res.redirect('/');
+    },
+    information: function(req, res){
+        res.render('information');
     }
 }
 

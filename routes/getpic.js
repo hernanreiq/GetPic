@@ -11,5 +11,6 @@ router.get('/upload', getpicControlller.upload);
 router.post('/upload', getpicControlller.imageUploaded);
 router.get('/image/:id', getpicControlller.viewProfile);
 router.get('/image/:id/delete', getpicControlller.delete);
+router.get('/information', getpicControlller.information);
 
 module.exports = router;
