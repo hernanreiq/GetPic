@@ -18,8 +18,9 @@ var controller = {
         image.description = req.body.description;
         image.image = req.file.filename;
         image.path = '/img/uploads/' + req.file.filename;
+        image.created_at = Date.now();
         await image.save();
-        res.status(200).send({message: image});
+        res.redirect('/');
     },
     viewProfile: async function(req, res){
         const {id} = req.params;

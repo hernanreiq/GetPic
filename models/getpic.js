@@ -8,7 +8,7 @@ var PicModel = Schema({
     title: {type: String},
     description: {type: String},
     path: {type: String},
-    created_at: {type: Date, default: Date.now()}
+    created_at: {type: Date}
 });
 
 module.exports = mongoose.model('picmodel', PicModel);
