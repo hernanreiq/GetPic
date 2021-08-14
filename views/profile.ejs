@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><%= image.title%></h5>
                         <p class="card-text"><%= image.description%></p>
-                        <p class="card-text text-secondary"><%= format(image.created_at)%></p>
+                        <p class="card-text text-warning"><%= format(image.created_at)%></p>
                         <a href="/image/<%= image._id%>/delete" class="btn btn-delete w-100">Delete image</a>
                     </div>
                 </div>
