@@ -1,6 +1,8 @@
 'use strict'
 
 const PicModel = require('../models/getpic');
+const path = require('path');
+const {unlink} = require('fs-extra');
 
 var controller = {
     home: async function(req, res){
@@ -19,8 +21,16 @@ var controller = {
         await image.save();
         res.status(200).send({message: image});
     },
-    delete: function(req, res){
-        res.status(200).render('delete');
+    viewProfile: async function(req, res){
+        const {id} = req.params;
+        const image = await PicModel.findById(id);
+        res.render('profile', {image});
+    },
+    delete: async function(req, res){
+        const { id } = req.params;
+        const image = await PicModel.findByIdAndRemove(id);
+        await unlink(path.resolve('./public' + image.path));
+        res.redirect('/');
     }
 }
 

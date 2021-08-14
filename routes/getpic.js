@@ -9,6 +9,7 @@ const router = Router();
 router.get('/', getpicControlller.home);
 router.get('/upload', getpicControlller.upload);
 router.post('/upload', getpicControlller.imageUploaded);
-router.get('/delete', getpicControlller.delete);
+router.get('/image/:id', getpicControlller.viewProfile);
+router.get('/image/:id/delete', getpicControlller.delete);
 
 module.exports = router;
