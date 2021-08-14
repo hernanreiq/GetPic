@@ -1,5 +1,22 @@
 <%- include('partials/head') %>
 <h1>Welcome to GetPic</h1>
 <h2>The Perfect clone of Pinterest</h2>
+<main>
+    <div class="container p-4">
+        <div class="row">
+            <div class="card-columns">
+                <% images.forEach(function(image){ %>
+                <div class="card">
+                    <img src="<%= image.path %>" alt="<%= image.title %>" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= image.title%></h5>
+                        <p class="card-text"><%= image.description%></p>
+                    </div>
+                </div>
+                <% })%>
+            </div>
+        </div>
+    </div>
+</main>
 <%- include('partials/footer') %>
 
